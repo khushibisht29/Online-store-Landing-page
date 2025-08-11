@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Payment & Delivery</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <h1>🛒 Checkout</h1>
+    <a href="../shop/shop.html">← Back to Shop</a>
+
+    <section class="checkout-container">
+        <!-- Delivery Address -->
+        <div class="delivery-address">
+            <h2>Delivery Address</h2>
+            <form id="addressForm">
+                <label>Full Name:</label>
+                <input type="text" name="fullname" required>
+
+                <label>Phone Number:</label>
+                <input type="tel" name="phone" required>
+
+                <label>Address:</label>
+                <textarea name="address" required></textarea>
+
+                <label>City:</label>
+                <input type="text" name="city" required>
+
+                <label>Postal Code:</label>
+                <input type="text" name="postal" required>
+            </form>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="payment-section">
+            <h2>Payment Method</h2>
+            <label>
+                <input type="radio" name="payment" value="cod" checked>
+                Cash on Delivery
+            </label>
+            <label>
+                <input type="radio" name="payment" value="razorpay">
+                Razorpay (Online)
+            </label>
+
+            <button id="placeOrderBtn">Place Order</button>
+        </div>
+    </section>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
